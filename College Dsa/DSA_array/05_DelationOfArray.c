@@ -21,6 +21,7 @@ int indDeletion(int arr[], int size, int cap, int ind)
         for (int i = ind; i < size-1; i++)
         {
             arr[i] = arr[i+1];
+            int i;
         }
         
     }

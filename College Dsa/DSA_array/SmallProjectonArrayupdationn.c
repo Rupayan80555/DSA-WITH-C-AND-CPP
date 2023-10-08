@@ -34,14 +34,23 @@ int main()
 
     display(array, size);
 
-    printf("Enter the element which you want to insert: ");
-    scanf("%d", &element);
-    printf("Enter the Index where you want to insert the Element: ");
-    scanf("%d", &index);
-    indInsertion(array, size, element, 100, index);
-    size += 1;
-    printf("\nThe new array is : ");
-    display(array, size);
+    printf("Do you want to insert element at your closeable Index?\n \t If it is yes tell (Y): ");
+    char a;
+    scanf("%c", &a);
+    if (a == 'Y')
+    {
+        printf("Enter the element which you want to insert: ");
+        scanf("%d", &element);
+        printf("Enter the Index where you want to insert the Element: ");
+        scanf("%d", &index);
+        indInsertion(array, size, element, 100, index);
+        size += 1;
+        printf("\nThe new array is : ");
+        display(array, size);
+    }
+    else{
+        printf("You have not changed Your array ^_^ ");
+    }
 
     return 0;
 }
