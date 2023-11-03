@@ -1,0 +1,68 @@
+There can be 4 types of pointer error like:-
+        1) NULL pointer assignment error;
+        2)wild pointers;
+        3) Dangling pointers;
+        4) Memory Leakage,
+
+
+1) NULL pointer assignment error:
+
+mane jokhon kono program tar allocated memory er theke besi jaiga neoar try kore orthat os address space e or other process address space e illegal space nebar try tokhon ei error ase.
+example:-
+int* ptr= NULL;
+*ptr=12;
+
+11 number line onujai jodi kono pointer er address NULL kora set  hoi tar mane oi address variable ke os 0 return korbe os address space e. 
+
+tai er theke bachar jonno malloc er maddhome heap e memory request korte hoi.
+
+2) wild pointer :-
+local variable e uninitialized address e je garbage address store hoi .
+
+3) Dangling pointer:-
+
+malloc function er maddhome heap e kono block of address store korar por jodi free function er use kore memory de-allocate kora hoi , tarpor jodi sei addresske abar access korar try kora hoi tokhon sei pointer ta hoi Dangling pointer.
+
+example:=
+        int* ptr = malloc(4*sizeof(int));
+        free(ptr);
+        *ptr=5; -->> (eta ekhon DANGLING pointer.)
+
+or ,
+
+out of scope gea jodi kono pointer ke access korar try kora hoi tokhono sei pointer ke Dangling pointer bole.
+
+example 1 :=
+ char* p=NULL;
+ {
+    cahr x="a",
+    p=x;
+ }
+
+ p ---->> eta ekhon ekta Dangling pointer
+
+
+example 2 :=
+        int* fun(){
+                int x=5;
+                return &x;
+        }
+
+        void main(){
+                int* p;
+                p= fun();     ======>> 
+                                        ekahne fun function er scope er por x er address de-allocated hoye jabe. but main function e tao x er address store koar try kora hocchr tai eta Dangling pointer.
+        }
+
+
+4) Memory Leakage :=
+
+dynamic memory allocation er por jodi amra memoryke free na kori tahole je memory reserved thake all time er jonno setakei memory Leakage bole.
+
+example:
+
+void arrayWork(int n){
+        int * p;
+        p=(int* )malloc(n * sizeof(int));  // erpor jodi free(p) na likhi tahole ei function execution er por p er address harea felbo ar sei storage ta all time tahkbe , etakei memory Leakage bole.
+
+}

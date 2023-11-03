@@ -1,0 +1,4 @@
+address all time hexa decimal format e thake jeta int e convert korle ta ekta unsigned int e porinoto hoi ba +ve integer e hoi. 
+
+
+unsigned er format spaceifer %u.
