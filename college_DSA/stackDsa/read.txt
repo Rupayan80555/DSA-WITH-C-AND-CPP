@@ -1,1 +1,0 @@
-stack er array implementation e 'top' holo index mane top er value index ke point korbe.
