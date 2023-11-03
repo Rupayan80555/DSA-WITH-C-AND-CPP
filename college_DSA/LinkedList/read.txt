@@ -1,0 +1,1 @@
+Head is not a node But using head we use to manipulate the node after head. The address is the key to manipulate nodes it is not just address it is the key of manipulation. The address is the address of the whole node, not the address of individual elements of the node.  
