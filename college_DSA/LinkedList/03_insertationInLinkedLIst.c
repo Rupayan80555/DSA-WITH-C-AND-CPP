@@ -19,14 +19,14 @@ void PrintDataOfLinkedList(struct node *ptr)
 
 struct node *insertAtFirst(struct node *head, int data)
 {
-    struct node *ptr = (struct node *)malloc(sizeof(struct node));
+    struct node *ptr = (struct node* )malloc(sizeof(struct node));
     ptr->next = head;
     ptr->data = data;
     return ptr;
 }
 
 struct node* insertAtIndex(struct node* head,int data,int index){
-    struct node*ptr=(struct node*)malloc(sizeof(struct node));
+    struct node*ptr=(struct node* )malloc(sizeof(struct node));
     struct node*p=head;
     int i=0;
     while (i!=index-1)
@@ -46,10 +46,10 @@ int main()
     struct node *second;
     struct node *third;
     struct node *fourth;
-    head = (struct node *)malloc(sizeof(struct node));
-    second = (struct node *)malloc(sizeof(struct node));
-    third = (struct node *)malloc(sizeof(struct node));
-    fourth = (struct node *)malloc(sizeof(struct node));
+    head = (struct node* )malloc(sizeof(struct node));
+    second = (struct node* )malloc(sizeof(struct node));
+    third = (struct node* )malloc(sizeof(struct node));
+    fourth = (struct node* )malloc(sizeof(struct node));
 
     // Link head to 1st node and assigning value to that
     head->data = 4;

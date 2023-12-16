@@ -9,8 +9,9 @@ struct node
 void printElm(struct node *ptr)
 {
     struct node *head = ptr;
-    printf("%d->", ptr->data);
-    ptr = ptr->next;
+    
+    // printf("%d->", ptr->data);
+    // ptr = ptr->next;
     // while (ptr != head)
     // {
     //     printf("%d->",ptr->data);

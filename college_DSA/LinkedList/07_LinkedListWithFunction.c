@@ -17,7 +17,7 @@ node* creatNode(int data)
     {
         temp = (node* ) malloc(sizeof(node));
         printf("Enter data of node Number %d : ",i+1);
-        scanf("%d", &(temp->data));
+        scanf("%d", & (temp->data));
         temp->next = NULL;
 
         if (head == NULL)
